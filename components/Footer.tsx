@@ -45,7 +45,7 @@ export default function Footer() {
               </span>
             </div>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', lineHeight: 1.6, marginBottom: '20px' }}>
-              The glass-first component system for modern web products.
+              At Origin Infinity, we strictly follow industry best practices to ensure quality, consistency, and reliability in every project
             </p>
             <div className="flex gap-3">
               {socials.map((social) => (
