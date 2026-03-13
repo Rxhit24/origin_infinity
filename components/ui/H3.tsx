@@ -7,7 +7,7 @@ const H3 = ({title}: H3Props) => {
     className="mb-3"
     style={{
         fontFamily: 'var(--font-display)',
-        fontSize: '1.2rem',
+        fontSize: '1.25rem',
         fontWeight: 600,
         color: 'var(--text-primary)',
     }}

@@ -4,7 +4,8 @@ import Label from './ui/Label'
 import H2 from './ui/H2'
 import Badge from './ui/Badge'
 import H3 from './ui/H3'
-import { ArrowRight, Brain, Cpu, HandHelping, HeartHandshake, MoveUp, ScanHeart, SunMedium, Trees } from 'lucide-react'
+import { ArrowRight, Brain, Cpu, HeartHandshake, ScanHeart, SunMedium, Trees } from 'lucide-react'
+import CardBadge from './ui/CardBadge'
 
 const features = [
   {
@@ -60,7 +61,7 @@ export default function Features() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <Label title='Why OriginInfinity ?' />
-          <H2 title='Serving Humanity Through' gradientTitle='Technology, Health, and Education'/>
+          <H2 title='Serving Humanity Through' gradientTitle='Technology, Health, and Education' newLine={true}/>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -73,13 +74,13 @@ export default function Features() {
               style={{
                 background: hovered === i
                   ? f.tone === 'orange'
-                    ? 'linear-gradient(135deg, rgba(249,115,22,0.18), rgba(234,88,12,0.08))'
-                    : 'linear-gradient(135deg, rgba(59,130,246,0.18), rgba(29,78,216,0.08))'
+                    ? 'var(--feature-hover-orange)'
+                    : 'var(--feature-hover-blue)'
                   : 'var(--glass-bg)',
                 backdropFilter: 'var(--glass-blur)',
                 WebkitBackdropFilter: 'var(--glass-blur)',
                 border: `1px solid ${hovered === i
-                  ? f.tone === 'orange' ? 'rgba(249,115,22,0.35)' : 'rgba(59,130,246,0.35)'
+                  ? f.tone === 'orange' ? 'var(--feature-border-orange)' : 'var(--feature-border-blue)'
                   : 'var(--glass-border)'}`,
                 boxShadow: hovered === i
                   ? f.tone === 'orange' ? 'var(--glass-shadow-orange)' : 'var(--glass-shadow-blue)'
@@ -89,7 +90,7 @@ export default function Features() {
             >
               {/* Tag */}
               <div className="flex items-center justify-between mb-5">
-                <Badge title={f.tag} tone={f.tone} />
+                <CardBadge title={f.tag} tone={f.tone} />
                 <div
                   className="text-2xl"
                   style={{ color: f.tone === 'orange' ? 'var(--orange-400)' : 'var(--blue-400)' }}

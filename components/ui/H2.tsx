@@ -3,7 +3,7 @@ type H2Props = {
     gradientTitle?: string
     newLine?: boolean
 }
-const H2 = ({title, gradientTitle, newLine = true}: H2Props) => {
+const H2 = ({title, gradientTitle, newLine = false}: H2Props) => {
   return (
     <h2
         style={{

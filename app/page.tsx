@@ -1,12 +1,8 @@
-import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import Features from '@/components/Features'
 import Carousel from '@/components/Carousel'
-import Testimonials from '@/components/Testimonials'
 import Accordion from '@/components/Accordion'
-import Pricing from '@/components/Pricing'
 import ContactForm from '@/components/ContactForm'
-import Footer from '@/components/Footer'
 
 export default function Page() {
   return (
@@ -46,7 +42,6 @@ export default function Page() {
         <Accordion />
         <ContactForm />
       </main>
-      <Footer />
     </div>
   )
 }

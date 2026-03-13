@@ -16,7 +16,7 @@ export default function Hero() {
           style={{
             width: '600px', height: '600px',
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(249,115,22,0.2) 0%, transparent 70%)',
+            background: 'var(--hero-orb-orange)',
             top: '-100px', left: '-100px',
             filter: 'blur(40px)',
             animationDuration: '8s',
@@ -27,7 +27,7 @@ export default function Hero() {
           style={{
             width: '500px', height: '500px',
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(59,130,246,0.2) 0%, transparent 70%)',
+            background: 'var(--hero-orb-blue)',
             bottom: '-50px', right: '-100px',
             filter: 'blur(40px)',
             animationDuration: '10s',
@@ -39,7 +39,7 @@ export default function Hero() {
           style={{
             width: '300px', height: '300px',
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(249,115,22,0.15) 0%, transparent 70%)',
+            background: 'var(--hero-orb-orange-soft)',
             top: '40%', right: '20%',
             filter: 'blur(30px)',
             animationDuration: '7s',
@@ -53,7 +53,7 @@ export default function Hero() {
           style={{
             width: '800px', height: '800px',
             borderRadius: '50%',
-            border: '1px solid rgba(249,115,22,0.08)',
+            border: '1px solid var(--hero-ring-orange)',
             top: '50%', left: '50%',
             transform: 'translate(-50%,-50%)',
           }}
@@ -63,7 +63,7 @@ export default function Hero() {
           style={{
             width: '600px', height: '600px',
             borderRadius: '50%',
-            border: '1px solid rgba(59,130,246,0.06)',
+            border: '1px solid var(--hero-ring-blue)',
             top: '50%', left: '50%',
             transform: 'translate(-50%,-50%)',
             animation: 'spin-slow 15s linear infinite reverse',

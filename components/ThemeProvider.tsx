@@ -1,5 +1,5 @@
 'use client'
-import { createContext, useContext, useEffect, useState, useCallback } from 'react'
+import { createContext, useCallback, useContext, useEffect, useState } from 'react'
 
 type Theme = 'dark' | 'light'
 
@@ -18,26 +18,22 @@ export function useTheme() {
 }
 
 export default function ThemeProvider({ children }: { children: React.ReactNode }) {
-  // Start with dark to match the server render — we'll correct on mount
-  const [theme, setTheme] = useState<Theme>('dark')
-  const [mounted, setMounted] = useState(false)
+  const [theme, setTheme] = useState<Theme>(() => {
+    if (typeof document === 'undefined') {
+      return 'dark'
+    }
+
+    return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark'
+  })
 
   useEffect(() => {
-    // On mount, read from localStorage or fall back to system preference
-    const stored = localStorage.getItem('glassui-theme') as Theme | null
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const resolved: Theme = stored ?? (prefersDark ? 'dark' : 'light')
-
-    setTheme(resolved)
-    document.documentElement.setAttribute('data-theme', resolved)
-    setMounted(true)
-  }, [])
+    document.documentElement.setAttribute('data-theme', theme)
+  }, [theme])
 
   const toggle = useCallback(() => {
     setTheme((prev) => {
       const next: Theme = prev === 'dark' ? 'light' : 'dark'
 
-      // Brief transition class so elements animate smoothly
       document.documentElement.classList.add('theme-transitioning')
       document.documentElement.setAttribute('data-theme', next)
       localStorage.setItem('glassui-theme', next)
@@ -49,15 +45,6 @@ export default function ThemeProvider({ children }: { children: React.ReactNode 
       return next
     })
   }, [])
-
-  // Suppress render until client theme is resolved to avoid flash
-  if (!mounted) {
-    return (
-      <ThemeContext.Provider value={{ theme, toggle }}>
-        <div style={{ visibility: 'hidden' }}>{children}</div>
-      </ThemeContext.Provider>
-    )
-  }
 
   return (
     <ThemeContext.Provider value={{ theme, toggle }}>
