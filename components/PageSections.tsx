@@ -45,10 +45,10 @@ export function PageHero({
             {description}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link href={primaryHref} className="btn-glass btn-primary" style={{ fontSize: "1rem", padding: "14px 36px", borderRadius: "14px" }}>
+            <Link href={primaryHref} className="btn-glass btn-primary" style={{ fontSize: "1rem", padding: "14px 36px", borderRadius: "8px" }}>
               {primaryLabel}
             </Link>
-            <Link href={secondaryHref} className="btn-glass btn-secondary" style={{ fontSize: "1rem", padding: "14px 36px", borderRadius: "14px" }}>
+            <Link href={secondaryHref} className="btn-glass btn-secondary" style={{ fontSize: "1rem", padding: "14px 36px", borderRadius: "8px" }}>
               {secondaryLabel}
             </Link>
           </div>
@@ -155,7 +155,7 @@ export function CardGrid({
             </ul>
           ) : null}
           {item.href ? (
-            <Link href={item.href} className="btn-glass btn-secondary mt-6" style={{ fontSize: "0.9rem", padding: "12px 22px", borderRadius: "14px", width: "fit-content" }}>
+            <Link href={item.href} className="btn-glass btn-secondary mt-6" style={{ fontSize: "0.9rem", padding: "12px 22px", borderRadius: "8px", width: "fit-content" }}>
               Learn more
             </Link>
           ) : null}
@@ -238,7 +238,7 @@ export function CtaBanner({
             </p>
           </div>
           <div className="mt-6 md:mt-0">
-            <Link href={href} className="btn-glass btn-primary" style={{ fontSize: "1rem", padding: "14px 36px", borderRadius: "14px" }}>
+            <Link href={href} className="btn-glass btn-primary" style={{ fontSize: "1rem", padding: "14px 36px", borderRadius: "8px" }}>
               {label}
             </Link>
           </div>

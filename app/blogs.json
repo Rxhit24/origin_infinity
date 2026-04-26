@@ -1,0 +1,119 @@
+[
+  {
+    "slug": "innovation-with-humanity",
+    "title": "Innovation With Humanity: How Origin Infinity Thinks About Practical Progress",
+    "excerpt": "A simple view of how technology, education, healthcare, sustainability, and social impact can work together without losing the human purpose behind the work.",
+    "publishedAt": "2026-03-12",
+    "updatedAt": "2026-03-12",
+    "author": "Origin Infinity Editorial Team",
+    "category": "Company Thinking",
+    "readingTime": "4 min read",
+    "coverImage": "/assets/carausel_innovation.webp",
+    "tags": ["innovation", "human impact", "digital transformation"],
+    "seo": {
+      "title": "Innovation With Humanity",
+      "description": "Learn how Origin Infinity connects technology, education, healthcare, sustainability, and social impact through practical innovation.",
+      "keywords": ["innovation with humanity", "Origin Infinity", "practical innovation India"]
+    },
+    "sections": [
+      {
+        "heading": "Progress starts with usefulness",
+        "body": [
+          "Innovation becomes meaningful when it solves a real problem, removes confusion, or gives people a better path forward. That is why Origin Infinity keeps its work close to practical outcomes instead of treating technology as decoration.",
+          "The company works across multiple sectors, but the common thread stays the same: create systems, services, and partnerships that people can understand, trust, and use."
+        ]
+      },
+      {
+        "heading": "Why multiple domains matter",
+        "body": [
+          "Education shapes capability, healthcare protects quality of life, technology improves execution, sustainability protects the future, and social impact connects work to communities.",
+          "When these areas are planned together, organizations can build work that is stronger than a single isolated service."
+        ]
+      },
+      {
+        "heading": "The practical standard",
+        "body": [
+          "Every initiative should answer clear questions: who benefits, what improves, how it will be maintained, and how the work can grow without losing responsibility.",
+          "That standard keeps innovation grounded in human value."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "digital-systems-for-growing-organizations",
+    "title": "Digital Systems for Growing Organizations: Websites, Apps, APIs, and Data",
+    "excerpt": "A practical guide to thinking about digital transformation as a reliable operating system for a growing organization.",
+    "publishedAt": "2026-03-05",
+    "updatedAt": "2026-03-05",
+    "author": "Origin Infinity IT Team",
+    "category": "IT Solutions",
+    "readingTime": "5 min read",
+    "coverImage": "/assets/carausel_vikshit.webp",
+    "tags": ["IT solutions", "web development", "API development", "data systems"],
+    "seo": {
+      "title": "Digital Systems for Growing Organizations",
+      "description": "Explore how websites, applications, APIs, and data systems help organizations become more reliable and scalable.",
+      "keywords": ["IT services India", "web application development", "API development", "digital transformation"]
+    },
+    "sections": [
+      {
+        "heading": "A website is only the front door",
+        "body": [
+          "For many organizations, the public website is the first visible digital asset. But real transformation usually depends on what sits behind it: workflows, data, communication, security, and reporting.",
+          "A good digital system helps people do the right work faster and with fewer mistakes."
+        ]
+      },
+      {
+        "heading": "Build for reliability",
+        "body": [
+          "Reliable systems use clear user journeys, maintainable code, secure access patterns, and data that can support decisions.",
+          "That means planning the backend, API structure, deployment flow, and future maintenance before the project becomes difficult to change."
+        ]
+      },
+      {
+        "heading": "The result",
+        "body": [
+          "A strong digital platform should reduce manual work, improve communication, and make growth easier to manage."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "education-health-and-sustainability-impact",
+    "title": "Education, Health, and Sustainability: Three Pillars of Long-Term Impact",
+    "excerpt": "Why community progress needs stronger learning support, responsible health work, and environmental care moving in the same direction.",
+    "publishedAt": "2026-02-24",
+    "updatedAt": "2026-02-24",
+    "author": "Origin Infinity Editorial Team",
+    "category": "Impact",
+    "readingTime": "4 min read",
+    "coverImage": "/assets/carausel_education.webp",
+    "tags": ["education", "health", "sustainability", "community development"],
+    "seo": {
+      "title": "Education, Health, and Sustainability Impact",
+      "description": "Understand why education, health, and sustainability are connected pillars for long-term community development.",
+      "keywords": ["education support", "healthcare innovation", "sustainability India", "community development"]
+    },
+    "sections": [
+      {
+        "heading": "Learning creates direction",
+        "body": [
+          "Education gives people the confidence to make better decisions. Good guidance can reduce confusion around admissions, careers, and skill development.",
+          "When students receive clear support, learning becomes a stronger foundation for future work."
+        ]
+      },
+      {
+        "heading": "Health protects possibility",
+        "body": [
+          "Healthcare work must be responsible, ethical, and centered on safety. Better consultation, pharmacy support, and clinical workflows can improve trust and reduce friction for people seeking care."
+        ]
+      },
+      {
+        "heading": "Sustainability keeps progress alive",
+        "body": [
+          "Environmental responsibility is not separate from development. It protects the conditions that allow communities, agriculture, and future generations to thrive."
+        ]
+      }
+    ]
+  }
+]

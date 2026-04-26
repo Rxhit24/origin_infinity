@@ -4,6 +4,7 @@ import { company, companyStats, leaderGroups, leaders, services } from "@/app/si
 import { buildPageMetadata } from "@/app/metadata";
 import Label from "@/components/ui/Label";
 import H3 from "@/components/ui/H3";
+import { PersonGrid } from "@/components/PersonCards";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "About Us",
@@ -83,23 +84,23 @@ export default function AboutPage() {
         title="A founder profile shaped across healthcare, education, and technology."
         description="The leadership team reflects a cross-functional background in healthcare, education, innovation, and digital execution, giving the company a broader and more practical decision-making lens."
       >
-        <CardGrid
-          items={[
+        <PersonGrid
+          people={[
             {
-              title: leaders.founder.name,
-              kicker: leaders.founder.role,
-              description: leaders.founder.bio,
-              bullets: leaders.founder.focus,
+              name: leaders.founder.name,
+              role: leaders.founder.role,
+              bio: leaders.founder.bio,
+              focus: leaders.founder.focus,
             },
             {
-              title: leaders.ngo.name,
-              kicker: leaders.ngo.role,
-              description: leaders.ngo.bio,
+              name: leaders.ngo.name,
+              role: leaders.ngo.role,
+              bio: leaders.ngo.bio,
             },
             {
-              title: leaders.environment.name,
-              kicker: leaders.environment.role,
-              description: leaders.environment.bio,
+              name: leaders.environment.name,
+              role: leaders.environment.role,
+              bio: leaders.environment.bio,
             },
           ]}
         />
@@ -110,14 +111,22 @@ export default function AboutPage() {
         title="Members organized by group and working area."
         description="Origin Infinity operates across multiple domains, so the team is easier to understand when grouped by function instead of shown as one undifferentiated list."
       >
-        <CardGrid
-          items={featuredGroups.map((group) => ({
-            title: group.title,
-            kicker: `${group.members.length} members`,
-            description: group.description,
-            bullets: group.members.map((member) => `${member.name} - ${member.role}`),
-          }))}
-        />
+        <div className="space-y-8">
+          {featuredGroups.map((group) => (
+            <div key={group.slug}>
+              <div className="mb-4 flex flex-col gap-1 md:flex-row md:items-end md:justify-between">
+                <div>
+                  <H3 title={group.title} />
+                  <p className="max-w-3xl text-sm leading-7" style={{ color: "var(--text-secondary)" }}>
+                    {group.description}
+                  </p>
+                </div>
+                <p className="text-sm font-semibold color-orange-400">{group.members.length} members</p>
+              </div>
+              <PersonGrid people={group.members} compact />
+            </div>
+          ))}
+        </div>
       </Section>
 
       <Section

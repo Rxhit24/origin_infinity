@@ -18,6 +18,7 @@ export default function Footer() {
       { label: 'About', href: '/about' },
       { label: 'Projects', href: '/projects' },
       { label: 'Services', href: '/services' },
+      { label: 'Blog', href: '/blog' },
       { label: 'Contact', href: '/contact' },
     ],
     Reach: company.reach.map((item) => ({ label: item, href: '/contact' })),

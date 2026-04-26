@@ -32,6 +32,7 @@ export default function Navbar() {
   const links = [
     {title:'Projects',link:'/projects'},
     {title:'Services',link:'/services'},
+    {title:'Blog',link:'/blog'},
     {title:'About',link:'/about'},
     {title:'Contact',link:'/contact'}
   ]
@@ -88,7 +89,7 @@ export default function Navbar() {
                 className="px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200"
                 style={{
                   color: isActiveLink(link.link) ? 'var(--text-primary)' : 'var(--text-secondary)',
-                  letterSpacing: '0.02em',
+                  letterSpacing: '0',
                   background: isActiveLink(link.link) ? 'var(--glass-bg)' : 'transparent',
                   border: isActiveLink(link.link) ? '1px solid var(--glass-border)' : '1px solid transparent',
                 }}

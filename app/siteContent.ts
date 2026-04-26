@@ -161,7 +161,7 @@ export const leaderGroups = [
       { name: "Nitish Kumar", role: "Technology Strategy Lead" },
       { name: "Ashishkumar Prasad", role: "Data Scientist" },
       { name: "Rohit Prasad", role: "Software Engineer" },
-      { name: "Manish Sahw", role: "Software Engineer" },
+      { name: "Manish Shaw", role: "Software Engineer" },
       { name: "Ajeet Kumar", role: "Software Engineer" },
       { name: "Hritik Kumar", role: "Software Engineer" },
     ],

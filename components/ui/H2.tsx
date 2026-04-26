@@ -10,7 +10,7 @@ const H2 = ({title, gradientTitle, newLine = false}: H2Props) => {
             fontFamily: 'var(--font-display)',
             fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
             fontWeight: 700,
-            letterSpacing: '-0.02em',
+            letterSpacing: '0',
             lineHeight: 1.1,
         }}
     >

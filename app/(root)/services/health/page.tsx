@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { CtaBanner, PageHero, Section, SplitPanel } from "@/components/PageSections";
 import { leaderGroups, leaders } from "@/app/siteContent";
 import { buildPageMetadata } from "@/app/metadata";
+import { PersonGrid } from "@/components/PersonCards";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Human Health Services",
@@ -53,16 +54,7 @@ export default function HumanHealthPage() {
       </Section>
 
       <Section eyebrow="Team" title="Human health team">
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {healthTeam.map((member) => (
-            <div key={member.name} className="glass rounded-[24px] border p-5 text-center">
-              <p className="text-sm font-semibold">{member.name}</p>
-              <p className="mt-2 text-xs" style={{ color: "var(--text-secondary)" }}>
-                {member.role}
-              </p>
-            </div>
-          ))}
-        </div>
+        <PersonGrid people={healthTeam} compact />
       </Section>
 
       <CtaBanner

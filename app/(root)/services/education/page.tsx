@@ -3,6 +3,7 @@ import { CtaBanner, PageHero, Section, SplitPanel } from "@/components/PageSecti
 import { company, leaderGroups } from "@/app/siteContent";
 import { buildPageMetadata } from "@/app/metadata";
 import Label from "@/components/ui/Label";
+import { PersonGrid } from "@/components/PersonCards";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Education Services",
@@ -52,16 +53,7 @@ export default function EducationPage() {
       </Section>
 
       <Section eyebrow="Team" title="Vision Era Education team">
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
-          {educationTeam.map((member) => (
-            <div key={member.name} className="glass rounded-[24px] border p-5 text-center">
-              <p className="text-sm font-semibold">{member.name}</p>
-              <p className="mt-2 text-xs" style={{ color: "var(--text-secondary)" }}>
-                {member.role}
-              </p>
-            </div>
-          ))}
-        </div>
+        <PersonGrid people={educationTeam} compact />
       </Section>
 
       <CtaBanner
