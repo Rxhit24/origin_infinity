@@ -7,7 +7,7 @@ export const company = {
   educationEmail: "visioneraeducation@gmail.com",
   phone: "+91-9546733410",
   location: "India",
-  reach: [ "Punjab", "West Bengal", "Uttarakhand", "Delhi", "Madhya Pradesh", "Maharashtra" ],
+  reach: ["Punjab", "West Bengal", "Uttarakhand", "Delhi", "Madhya Pradesh", "Maharashtra"],
   tagline: "Innovation with humanity for a skilled, sustainable, and future-ready Bharat.",
   mission:
     "Origin Infinity builds practical solutions across technology, education, healthcare, sustainability, and community development with a clear focus on human impact.",
@@ -174,9 +174,7 @@ export const leaderGroups = [
     members: [
       { name: "Nitish Kumar", role: "Academic Strategy Lead" },
       { name: "Rajat Kumar", role: "Student Support Coordinator" },
-      { name: "Rambhajan Kumar", role: "Registration Support" },
-      { name: "Shoab Akhatar", role: "Education Outreach" },
-      { name: "Ramshankar Pandit", role: "Academic Operations Support" },
+      { name: "Shoab Akhatar", role: "Education Outreach" }
     ],
   },
   {
@@ -186,9 +184,7 @@ export const leaderGroups = [
       "Sustainability planning, agronomy insight, environmental field execution, and long-term stewardship initiatives.",
     members: [
       { name: "Anish Kumar", role: "Head of Save Environment" },
-      { name: "Nitish Kumar", role: "Sustainability Program Lead" },
-      { name: "Rambhajan Kumar", role: "Field Operations Support" },
-      { name: "Ramshankar Pandit", role: "Community Eco Outreach" },
+      { name: "Nitish Kumar", role: "Sustainability Program Lead" }
     ],
   },
   {
@@ -199,11 +195,8 @@ export const leaderGroups = [
     members: [
       { name: "Dr. Haridayal Prasad", role: "Medical Professional" },
       { name: "Nitish Kumar", role: "Health Innovation Lead" },
-      { name: "Ramshankar Pandit", role: "Clinical Operations Support" },
-      { name: "Rambhajan Kumar", role: "Health Program Support" },
       { name: "Sandeep Vats", role: "Health Team Member" },
       { name: "Rishav Singh", role: "Health Team Member" },
-      { name: "Navneet Kumar", role: "Health Team Member" },
       { name: "Anmol Singh", role: "Health Team Member" },
       { name: "Manpreet Singh", role: "Health Team Member" },
     ],
