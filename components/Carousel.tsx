@@ -72,8 +72,8 @@ export default function Carousel() {
           className="relative rounded-3xl overflow-hidden transition-all duration-500 "
           style={{
             background: isOrange
-              ? 'linear-gradient(135deg, rgba(249,115,22,0.12), rgba(6,10,20,0.6))'
-              : 'linear-gradient(135deg, rgba(59,130,246,0.12), rgba(6,10,20,0.6))',
+              ? 'linear-gradient(135deg, rgba(249,115,22,0.14), var(--glass-card-bg))'
+              : 'linear-gradient(135deg, rgba(59,130,246,0.14), var(--glass-card-bg))',
             backdropFilter: 'blur(24px)',
             WebkitBackdropFilter: 'blur(24px)',
             border: `1px solid ${isOrange ? 'rgba(249,115,22,0.25)' : 'rgba(59,130,246,0.25)'}`,
@@ -119,8 +119,8 @@ export default function Carousel() {
                     key={item}
                     className="px-3 py-1.5 rounded-xl text-xs font-medium"
                     style={{
-                      background: 'rgba(255,255,255,0.06)',
-                      border: '1px solid rgba(255,255,255,0.1)',
+                      background: 'var(--glass-bg)',
+                      border: '1px solid var(--glass-border)',
                       color: 'var(--text-secondary)',
                     }}
                   >
@@ -134,7 +134,7 @@ export default function Carousel() {
             <div
               className="flex items-center justify-center p-6 sm:p-10 relative"
               style={{
-                borderLeft: '1px solid rgba(255,255,255,0.08)',
+                borderLeft: '1px solid var(--glass-border)',
               }}
             >
               <div
@@ -158,7 +158,7 @@ export default function Carousel() {
           {/* Navigation */}
           <div
             className="flex items-center justify-between px-10 py-4"
-            style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
+            style={{ borderTop: '1px solid var(--glass-border)' }}
           >
             <div className="flex gap-2">
               {slides.map((_, i) => (
@@ -171,7 +171,7 @@ export default function Carousel() {
                     height: '8px',
                     background: active === i
                       ? isOrange ? 'var(--orange-500)' : 'var(--blue-500)'
-                      : 'rgba(255,255,255,0.2)',
+                      : 'var(--glass-border-hover)',
                   }}
                 />
               ))}
@@ -198,7 +198,7 @@ export default function Carousel() {
                     ;(e.currentTarget as HTMLElement).style.borderColor = 'var(--glass-border)'
                   }}
                 >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: 'var(--text-primary)' }}>
                     {dir === -1
                       ? <path d="M19 12H5M12 19l-7-7 7-7"/>
                       : <path d="M5 12h14M12 5l7 7-7 7"/>}

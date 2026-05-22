@@ -30,11 +30,11 @@ export default function Navbar() {
   }, [pathname])
 
   const links = [
-    {title:'Projects',link:'/projects'},
-    {title:'Services',link:'/services'},
-    {title:'Blog',link:'/blog'},
-    {title:'About',link:'/about'},
-    {title:'Contact',link:'/contact'}
+    { title: 'Projects', link: '/projects' },
+    { title: 'Services', link: '/services' },
+    { title: 'Blog', link: '/blog' },
+    { title: 'About', link: '/about' },
+    { title: 'Contact', link: '/contact' }
   ]
 
   const isActiveLink = (href: string) => {
@@ -73,7 +73,7 @@ export default function Navbar() {
               boxShadow: '0 0 20px var(--orange-glow)',
             }}
           >
-            <Image src="/origin_logo.webp" alt="Origin Infinity Logo" width={40} height={40} /> 
+            <Image src="/origin_logo.webp" alt="Origin Infinity Logo" width={40} height={40} />
           </div>
           <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.1rem' }}>
             Origin <span className="gradient-text">Infinity</span>
@@ -95,11 +95,11 @@ export default function Navbar() {
                 }}
                 onMouseEnter={e => {
                   (e.currentTarget as HTMLElement).style.color = 'var(--text-primary)'
-                  ;(e.currentTarget as HTMLElement).style.background = 'var(--glass-bg)'
+                    ; (e.currentTarget as HTMLElement).style.background = 'var(--glass-bg)'
                 }}
                 onMouseLeave={e => {
                   (e.currentTarget as HTMLElement).style.color = 'var(--text-secondary)'
-                  ;(e.currentTarget as HTMLElement).style.background = 'transparent'
+                    ; (e.currentTarget as HTMLElement).style.background = 'transparent'
                 }}
               >
                 {link.title}
@@ -123,7 +123,7 @@ export default function Navbar() {
             onClick={() => setMenuOpen(!menuOpen)}
           >
             <div className="w-5 h-4 flex flex-col justify-between">
-              {[0,1,2].map(i => (
+              {[0, 1, 2].map(i => (
                 <span
                   key={i}
                   className="block h-0.5 rounded-full transition-all duration-300"
@@ -142,8 +142,14 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div
-          className="md:hidden mx-4 mb-4 rounded-2xl p-4 glass animate-slide-up"
-          style={{ borderColor: 'var(--glass-border)' }}
+          className="md:hidden mx-4 mb-4 rounded-2xl p-4 animate-slide-up"
+          style={{
+            background: isDark ? 'rgba(6,10,20,0.96)' : 'rgba(244,246,251,0.97)',
+            backdropFilter: 'blur(24px)',
+            WebkitBackdropFilter: 'blur(24px)',
+            border: `1px solid ${isDark ? 'rgba(255,255,255,0.10)' : 'rgba(0,0,0,0.08)'}`,
+            boxShadow: 'var(--glass-shadow-lg)',
+          }}
         >
           {links.map((link) => (
             <Link
@@ -157,11 +163,11 @@ export default function Navbar() {
               }}
               onMouseEnter={e => {
                 (e.currentTarget as HTMLElement).style.color = 'var(--text-primary)'
-                ;(e.currentTarget as HTMLElement).style.background = 'var(--glass-bg-hover)'
+                  ; (e.currentTarget as HTMLElement).style.background = 'var(--glass-bg-hover)'
               }}
               onMouseLeave={e => {
                 (e.currentTarget as HTMLElement).style.color = 'var(--text-secondary)'
-                ;(e.currentTarget as HTMLElement).style.background = 'transparent'
+                  ; (e.currentTarget as HTMLElement).style.background = 'transparent'
               }}
             >
               {link.title}
@@ -173,6 +179,7 @@ export default function Navbar() {
           </div>
         </div>
       )}
+
     </nav>
   )
 }

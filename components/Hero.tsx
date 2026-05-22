@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import Badge from "./ui/Badge"
+import HeroCanvas from "./HeroCanvas"
 import { ArrowRight, Heart, Play } from "lucide-react"
 
 export default function Hero() {
@@ -10,7 +11,9 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{ paddingTop: '80px' }}
     >
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Interactive particle canvas */}
+        <HeroCanvas />
         <div
           className="absolute animate-float"
           style={{
@@ -20,6 +23,7 @@ export default function Hero() {
             top: '-100px', left: '-100px',
             filter: 'blur(40px)',
             animationDuration: '8s',
+            pointerEvents: 'none',
           }}
         />
         <div
@@ -32,6 +36,7 @@ export default function Hero() {
             filter: 'blur(40px)',
             animationDuration: '10s',
             animationDelay: '2s',
+            pointerEvents: 'none',
           }}
         />
         <div
@@ -44,6 +49,7 @@ export default function Hero() {
             filter: 'blur(30px)',
             animationDuration: '7s',
             animationDelay: '1s',
+            pointerEvents: 'none',
           }}
         />
 
@@ -56,6 +62,7 @@ export default function Hero() {
             border: '1px solid var(--hero-ring-orange)',
             top: '50%', left: '50%',
             transform: 'translate(-50%,-50%)',
+            pointerEvents: 'none',
           }}
         />
         <div
@@ -67,13 +74,14 @@ export default function Hero() {
             top: '50%', left: '50%',
             transform: 'translate(-50%,-50%)',
             animation: 'spin-slow 15s linear infinite reverse',
+            pointerEvents: 'none',
           }}
         />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <Link href='/about-us'>
-          <Badge title="Innovation with Humanity"  startIcon={<Heart  color="var(--orange-300)" size={20}/>} endIcon={<ArrowRight color="var(--orange-300)" size={20}/>}/>
+          <Badge title="Innovation with Humanity" startIcon={<Heart color="var(--orange-400)" size={20} />} endIcon={<ArrowRight color="var(--orange-400)" size={20} />} />
         </Link>
 
         <h1

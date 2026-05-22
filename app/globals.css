@@ -473,14 +473,13 @@ body::before {
 .person-modal {
   background: var(--bg-base);
   border: 1px solid var(--glass-border);
-  border-radius: 8px;
+  border-radius: 20px;
   box-shadow: var(--glass-shadow-lg);
-  max-height: min(86vh, 760px);
-  max-width: 720px;
+  max-height: min(88vh, 780px);
+  max-width: 560px;
   overflow: auto;
-  padding: 26px;
   position: relative;
-  width: min(100%, 720px);
+  width: min(100%, 560px);
 }
 
 [data-theme="light"] .person-modal {
@@ -624,7 +623,6 @@ body::before {
 @media (max-width: 640px) {
   .person-modal {
     max-height: 90vh;
-    padding: 22px;
   }
 
   .person-modal-header {

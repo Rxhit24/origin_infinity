@@ -24,7 +24,7 @@ const Badge = ({title, tone = 'orange', startIcon, endIcon}: BadgeProps) => {
                     className="w-2 h-2 rounded-full"
                     style={{ background: 'var(--orange-400)', boxShadow: '0 0 8px var(--orange-glow)' }}
                 /> */}
-                <span style={{ color: tone == 'orange' ? 'var(--orange-300)' : 'var(--blue-300)' }}>{title}</span>
+                <span style={{ color: tone == 'orange' ? 'var(--orange-400)' : 'var(--blue-400)' }}>{title}</span>
                 {endIcon && (
                     <span className="flex items-center">
                         {endIcon}
